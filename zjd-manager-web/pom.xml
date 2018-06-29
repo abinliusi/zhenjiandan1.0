@@ -5,13 +5,25 @@
     <artifactId>zjd-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>zjd-portal-web</artifactId>
+  <groupId>cn.zjd</groupId>
+  <artifactId>zjd-manager-web</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <dependencies>
+		<dependency>
+		<groupId>cn.zjd</groupId>
+		<artifactId>zjd-manager-interface</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- <dependency>
-			<groupId>cn.zjd</groupId>
-			<artifactId>zjd-content-interface</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+		<groupId>cn.zjd</groupId>
+		<artifactId>zjd-content-interface</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+		<groupId>cn.zjd</groupId>
+		<artifactId>zjd-search-interface</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 		</dependency> -->
 		<!-- JSP相关 -->
 		<dependency>
@@ -90,6 +102,13 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>
+		
+		<!-- 文件上传组件 -->
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>${commons-fileupload.version}</version>
+			</dependency>
 	</dependencies>
 	<build>  
         <plugins>  
@@ -100,7 +119,7 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<configuration>
 					<path>/</path>
-					<port>8082</port>
+					<port>8081</port>
 				</configuration>
 			</plugin>
         
